@@ -1,11 +1,13 @@
 language: ruby
 rvm:
- - jruby
-
+- jruby
 deploy:
   provider: lambda
-  function_name: "lambda-test"
-  region: "us-east-1"
-  role: "arn:aws:iam::0123456789012:role/lambda_basic_execution"
-  runtime: "java8"
-  handler_name: "handler"
+  function_name: jruby-test
+  region: us-east-1
+  role: arn:aws:iam::009505712704:role/service-role/lambda_basic_execution
+  runtime: java8
+  handler_name: handler
+  access_key_id: AKIAI3WR3XMUVE25BXJQ
+  secret_access_key:
+    secure: pEEQ/nfhVIOyCcmm9gogeh5P9l+NO+tVaigR0V4iGklVpJFD6FuYp4lzBv7NXIX3yf2+pieeAREHyn9e1E4Z9oaVXByqRBclGh0zU6TbJH4e3P6+O49Vkm5y3t/LxcRY7qP3C43yulJvb7tEjOA507jL1eY1+ePo7e2vmz7nAxxpGx1T7r5eUJpoBw/csqv22eJ+O9z0n7aly1hmMY1BgALNkmyF24SLxJGdM9PCAyl+l9ayIbCgkTE6a2sQHqfAi/JONuSYonxYcV6xjezLakx/8y0JxeOhXgWc+AC5czClsi5x4sAMMfDmnqMWCEDjWNNNlWHwazl592363xQZ80OYpXzawVZMZuraEetTn1tKjnzcw1SNSVysOhNdZcSeq3icZUGMOhHAGN+tRuVBqjVVeI2PwAdgEMyy5A7NFL/5pXXbkQcc1hfKe6qHsD7KyHMlVZXDHEcHXwbnCFcAMq6p5ZEA5EDsCa1B7+O1XGJhNBfqHg2zxbg1rlGRPIlBdqP77czybvmkAZuZbuaMTHrva3GWlqeUhoLPuzmN1pO1JWDNi9t/qdSg2XUXVxdMwE9uU6A6QJvK2PieUixq7nMKakCfMV/lm820Hve6LGqers9wXpYZq+hcYYfBAUiLmfqEJR60/4NCC0csURV/kW+wPuSVHwjfYxBYm8HoBL4=
