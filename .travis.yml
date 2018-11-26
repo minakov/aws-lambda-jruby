@@ -1,3 +1,11 @@
 language: ruby
 rvm:
  - jruby
+
+deploy:
+  provider: lambda
+  function_name: "lambda-test"
+  region: "us-east-1"
+  role: "arn:aws:iam::0123456789012:role/lambda_basic_execution"
+  runtime: "java8"
+  handler_name: "handler"
